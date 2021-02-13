@@ -1,0 +1,20 @@
+<p>search works!</p>
+
+<form [formGroup]="searchForm" >
+    <div>
+      <label for="searchstring">
+        Search
+      </label>
+      <input id="searchstring" type="text" formControlName="search" />
+    </div>
+    <button class="button" type="submit">Run Search</button>
+</form>
+   
+
+<h1>Search Result</h1>
+
+<div >
+    {{movie.Title }}
+</div>
+
+<button (click)="clickMe()">Click Me, click me real good!</button>
