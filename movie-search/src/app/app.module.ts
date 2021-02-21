@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './components/app-component/app.component';
+import { MovieapiService } from './services/movieapi.service';
 import { MagicModule } from './magic/magic.module';
 import { HighlightDirective } from './directives/highlight/highlight.directive';
 import { SearchComponent } from './components/search/search.component';
@@ -25,7 +26,7 @@ import { DetailComponent } from './components/detail/detail.component';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [MovieapiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
