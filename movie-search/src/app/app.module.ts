@@ -8,13 +8,15 @@ import { HighlightDirective } from './directives/highlight/highlight.directive';
 import { SearchComponent } from './components/search/search.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { DetailComponent } from './components/detail/detail.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HighlightDirective,
-    SearchComponent
+    SearchComponent,
+    DetailComponent
   ],
   imports: [
     BrowserModule,
