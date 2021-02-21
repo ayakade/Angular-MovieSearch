@@ -1,20 +1,48 @@
-<p>search works!</p>
+<div class="container">
+  <div class="form">
+    <h1>Search for a movie</h1>
+    <input id="search"
+    (blur)="changeBorder($event, 'red')"
+    (keyup)="onKeyUp($event, '')"
+    (keydown)="onKeyDown($event)"
+    (keypress)="onKeyPress($event)"
+    placeholder="Search for a movie"/>
 
-<form [formGroup]="searchForm" >
-    <div>
-      <label for="searchstring">
-        Search
-      </label>
-      <input id="searchstring" type="text" formControlName="search" />
+    <button (click)="searchMovie()">Search</button>
+  </div><!-- .form -->
+
+  <div id="results">
+
+    <ng-container *ngIf="movies">
+
+      <div *ngFor="let movie of movies">
+        {{ movie.Title }}
+      </div>
+
+    </ng-container>
+
+  </div><!-- .redults -->
+  <!-- <ng-container *ngIf="todos">
+
+      <div *ngFor="let todo of todos">
+        {{ todo.content }}
+      </div>
+
+  </ng-container> -->
+
+  <!-- <ul>
+    <div *ngFor="let todo of todos">
+      <li *ngIf="todo.content !== 'sleep'">
+        {{ todo.content }}
+      </li>
     </div>
-    <button class="button" type="submit">Run Search</button>
-</form>
-   
+  </ul>
 
-<h1>Search Result</h1>
-
-<div >
-    {{movie.Title }}
-</div>
-
-<button (click)="clickMe()">Click Me, click me real good!</button>
+  <ul>
+    <ng-container *ngFor="let todo of todos">
+      <li *ngIf="todo.content !== 'sleep'">
+        {{ todo.content }}
+      </li>
+    </ng-container>
+  </ul> -->
+</div><!-- .container -->
