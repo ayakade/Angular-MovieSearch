@@ -6,7 +6,8 @@ import { DetailComponent } from './components/detail/detail.component';
 // this is where add our routes.
 const appUrls: Routes = [
   { path: '', component: SearchComponent },
-  { path: '/detail', component: DetailComponent }
+  { path: 'detail', component: DetailComponent },
+  { path: "**", redirectTo: "/", pathMatch: "full" }
 ];
 
 @NgModule({
