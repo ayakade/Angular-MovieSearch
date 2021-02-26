@@ -14,11 +14,8 @@ export class MovieapiService {
   public getMovies<T>(keyword: string): Observable<T>{
     return this.http.get<T>(`${this.api}&s=${keyword}`)
   }
-  // baseUrl:string = 'http://www.omdbapi.com/';
 
-  // constructor(private http: HttpClient) { }
-
-  // public getMovies<T>(): Observable<T>{
-  //   return this.http.get<T>(`${this.baseUrl}?i=tt3896198&apikey=fe90ea07`);
-  // }
+  public getMovieDetails<T>(movieId: string): Observable<T>{
+    return this.http.get<T>(`${this.api}&i=${movieId}`)
+  }
 }
