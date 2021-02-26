@@ -1,3 +1,20 @@
-<div class="container">
-<h1>hello</h1>
+<div class="container" *ngIf="movie_detail">
+  <div class="title">
+    <h2>{{ movie_detail.Title }}</h2>
+    <p>({{ movie_detail.Year }})</p>
+  </div><!-- .title -->
+
+  <img
+    src={{movie_detail.Poster}}
+    alt={{movie_detail.Title}}
+  />
+
+  <div class="description">
+    <p>Genre: {{ movie_detail.Genre }}</p>
+    <p>Actors: {{ movie_detail.Actors }}</p>
+    <p>{{ movie_detail.Plot }}</p>
+  </div><!-- .description -->
+
+  <button class="btn" routerLink="/">Go Back</button>
+
 </div><!-- .container -->
