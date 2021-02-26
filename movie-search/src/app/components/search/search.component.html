@@ -1,48 +1,34 @@
 <div class="container">
   <div class="form">
     <h1>Search for a movie</h1>
-    <input id="search"
-    (blur)="changeBorder($event, 'red')"
+    <input type="text"
+    id="search"
     (keyup)="onKeyUp($event, '')"
     (keydown)="onKeyDown($event)"
     (keypress)="onKeyPress($event)"
-    placeholder="Search for a movie"/>
+    placeholder="movie title"/>
 
     <button (click)="searchMovie()">Search</button>
   </div><!-- .form -->
 
   <div id="results">
-
     <ng-container *ngIf="movies">
 
-      <div *ngFor="let movie of movies">
-        {{ movie.Title }}
-      </div>
+      <div class="movie" *ngFor="let movie of movies">
+        <img
+            src={{movie.Poster}}
+            alt={{movie.Title}}
+        />
+        <h2>{{ movie.Title }}</h2>
+        <a
+          class="cta"
+          [routerLink]="['/detail', movie.imdbID]"
+        >
+          Learn More
+        </a>
+      </div><!-- .movie -->
 
     </ng-container>
 
   </div><!-- .redults -->
-  <!-- <ng-container *ngIf="todos">
-
-      <div *ngFor="let todo of todos">
-        {{ todo.content }}
-      </div>
-
-  </ng-container> -->
-
-  <!-- <ul>
-    <div *ngFor="let todo of todos">
-      <li *ngIf="todo.content !== 'sleep'">
-        {{ todo.content }}
-      </li>
-    </div>
-  </ul>
-
-  <ul>
-    <ng-container *ngFor="let todo of todos">
-      <li *ngIf="todo.content !== 'sleep'">
-        {{ todo.content }}
-      </li>
-    </ng-container>
-  </ul> -->
 </div><!-- .container -->
