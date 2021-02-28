@@ -32,26 +32,12 @@ button {
 
 .movie {
   width: 300px;
-  border: 2px #ccc solid;
   padding: 30px;
   margin-bottom: 50px;
-  border-radius: 2px;
 }
 
-h2 {
-  font-size: 18px;
+.title {
   margin-bottom: 30px;
-}
-
-.cta {
-  background-color: navy;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 2px;
-}
-
-a {
-  text-decoration: none;
 }
 
 

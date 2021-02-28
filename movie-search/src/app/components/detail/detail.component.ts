@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { MovieapiService } from 'src/app/services/movieapi.service';
 
-
 @Component({
   selector: 'app-detail',
   templateUrl: './detail.component.html',

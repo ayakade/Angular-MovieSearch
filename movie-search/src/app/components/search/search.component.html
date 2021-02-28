@@ -14,19 +14,14 @@
   <div id="results">
     <ng-container *ngIf="movies">
 
-      <div class="movie" *ngFor="let movie of movies">
+      <mat-card class="movie example-card" *ngFor="let movie of movies">
         <img
-            src={{movie.Poster}}
+            mat-card-image src={{movie.Poster}}
             alt={{movie.Title}}
         />
-        <h2>{{ movie.Title }}</h2>
-        <a
-          class="cta"
-          [routerLink]="['/detail', movie.imdbID]"
-        >
-          Learn More
-        </a>
-      </div><!-- .movie -->
+        <mat-card-title class="title">{{ movie.Title }}</mat-card-title>
+        <button [routerLink]="['/detail', movie.imdbID]" mat-button> Learn More</button>
+      </mat-card><!-- .movie -->
 
     </ng-container>
 

@@ -1,20 +1,20 @@
-<div class="container" *ngIf="movie_detail">
+<mat-card  class="container" *ngIf="movie_detail">
   <div class="title">
-    <h2>{{ movie_detail.Title }}</h2>
+    <mat-card-title>{{ movie_detail.Title }}</mat-card-title>
     <p>({{ movie_detail.Year }})</p>
   </div><!-- .title -->
 
   <img
-    src={{movie_detail.Poster}}
+    mat-card-image src={{movie_detail.Poster}}
     alt={{movie_detail.Title}}
   />
 
-  <div class="description">
+  <mat-card-content>
     <p>Genre: {{ movie_detail.Genre }}</p>
     <p>Actors: {{ movie_detail.Actors }}</p>
     <p>{{ movie_detail.Plot }}</p>
-  </div><!-- .description -->
+  </mat-card-content>
 
-  <button class="btn" routerLink="/">Go Back</button>
+  <button routerLink="/" mat-button>Go Back</button>
 
-</div><!-- .container -->
+</mat-card>
