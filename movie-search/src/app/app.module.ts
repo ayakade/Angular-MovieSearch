@@ -10,6 +10,8 @@ import { SearchComponent } from './components/search/search.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { DetailComponent } from './components/detail/detail.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatCardModule } from '@angular/material/card';
 
 
 @NgModule({
@@ -24,7 +26,9 @@ import { DetailComponent } from './components/detail/detail.component';
     AppRoutingModule,
     MagicModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatCardModule
   ],
   providers: [MovieapiService],
   bootstrap: [AppComponent]
